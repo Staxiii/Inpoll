@@ -1,0 +1,147 @@
+@import "css/animations/apparition.css";
+
+:root{
+    --border: #cccfd3;
+    --container-padding:20px;
+    --container-width: calc(90vw - var(--container-padding) * 2)
+}
+
+/* MENU NAV */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    margin: 1% 0;
+    opacity: 0;
+    animation: apparition 0.8s ease-in-out 0.5s forwards;
+    --border-header: var(--border);
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    background-color: var(--border-header);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+}
+
+.navbar a img {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    padding: 15px;
+}
+
+.navbar .nav-title {
+    font-size: 24px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding-left: 2%;
+    transform: translateX(-50px);
+}
+.navbar .nav-title span {
+    font-family: "Signika", sans-serif;
+    font-weight: bolder;
+    color: rgba(24, 139, 24, 0.88);
+}
+
+.navbar .nav-content ul {
+    display: inline-flex;
+    color: rgb(11, 87, 24);
+}
+.navbar .nav-content ul li {
+    margin: 0 25px;
+    list-style-type: none;
+    position: relative;
+}
+.navbar .nav-content ul li a {
+    color: rgba(87, 87, 87, 0.60);
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    font-size: 20px;
+}
+.navbar .nav-content ul li a span {
+    position: absolute;
+    font-size: 12px;
+    top: -1rem;
+    right: -1rem;
+    background-color: #FF4754;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HAMBURGER */
+.navbar .hamburger-menu {
+    position: absolute;
+    right: -15px;
+    bottom: -35px;
+    display: none;
+    width: 50px;
+
+}
+.navbar .nav-content .mobile-menu {
+    background-color: red;
+}
+
+/* MOBILE CSS */
+@media screen and (max-width: 1260px){
+
+    .navbar {
+        margin-top: 8%;
+        padding-left: 0;
+    }
+    .navbar::after, .navbar .nav-title{
+        display: none;
+    }
+    .navbar .hamburger-menu {
+        display: block;
+    }
+
+    .nav-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.8s ease-out;
+        margin-left: -100%;
+        font-size: 1.5rem;
+    }
+
+    .nav-content.mobile-menu {
+        transition: 0.8s ease-out;
+        margin-left: 0;
+    }
+    .nav-content ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .navbar .nav-content ul li a {
+        font-size: 1rem;
+    }
+
+    .navbar .nav-content ul li a span {
+        position: absolute;
+        font-size: 8px;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        margin-right: 10%;
+    }
+}

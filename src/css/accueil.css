@@ -1,0 +1,123 @@
+@import "../css/animations/apparition.css";
+@import "../css/animations/multicolor.css";
+
+:root {
+    --bg-color: rgba(138, 136, 134, 0.05);
+    --border: #cccfd3;
+    --container-padding:20px;
+    --container-width: calc(90vw - var(--container-padding) * 2)
+}
+
+* {
+    padding: 0;
+    margin: 10px;
+    font-family: 'Signika', sans-serif;
+}
+.body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 45px;
+    box-shadow: 2px 2px 5px #000;
+}
+/* REPRISE NAV */
+.navbar .nav-content ul li .index-color {
+    color: #2f5bdd;
+}
+a {
+    text-decoration: none;
+}
+
+.container-accueil {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    padding: 10%;
+    opacity: 0;
+    animation: apparition 1s ease-in-out 0.7s forwards;
+    --border-header: var(--border);
+}
+.container-accueil::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background-color: var(--border-header);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+}
+
+.container-accueil h1 {
+    font-size: 2.5rem;
+    color: #5c5d5c;
+}
+.container-accueil h1 .sondage {
+    text-transform: uppercase;
+    color: #0733ef;
+}
+.container-accueil p {
+    font-size: 1.5rem;
+    color: rgba(128, 128, 128, 0.87);
+    margin-bottom: 5%;
+}
+.container-accueil p .number {
+    color: #067b06;
+    font-style: normal;
+    animation-duration: 2s;
+    animation-name: multicolor;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+a.discover-btn {
+    background-color: #fff;
+    color: red;
+    border: 2px solid red;
+    border-radius: 45px;
+    padding: 1%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.9s ease;
+    text-decoration: none;
+}
+i {
+    transition: all 0.9s ease;
+}
+
+a.discover-btn:hover {
+    color: #fff;
+    background-color: red;
+}
+
+a.discover-btn:hover i {
+    transform: rotate(360deg);
+}
+@media screen and (max-width: 1260px){
+
+    .container {
+        border: none;
+        box-shadow: none;
+    }
+    .container-accueil {
+        margin-top: 10%;
+    }
+    .container-accueil h1 {
+        font-size: 1.75rem;
+    }
+
+    .container-accueil p {
+        font-size: 1rem;
+    }
+    .container-accueil::after {
+
+    }
+}
+

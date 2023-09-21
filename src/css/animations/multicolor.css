@@ -1,0 +1,36 @@
+@keyframes multicolor {
+    0% {
+        color: #45fa42;
+    }
+
+    10% {
+        color: #0b6a0c;
+    }
+
+    20% {
+        color: #c0ed15;
+    }
+
+    30% {
+        color: #f16f22;
+    }
+
+    40% {
+        color: #c51b1b;
+    }
+    50% {
+        color: #1fd7b4;
+    }
+    60% {
+        color: #046982;
+    }
+    70% {
+        color: #163a84;
+    }
+    80% {
+        color: #100a61;
+    }
+    100% {
+        color: #45fa42;
+    }
+}

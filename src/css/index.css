@@ -1,0 +1,130 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: rgb(230, 230, 230);
+}
+/* FORM */
+.container-form {
+    opacity: 0;
+    margin-top: 10%;
+    text-align: center;
+    transform: translateY(40px);
+    background: rgba(168, 171, 172, 0.38);
+    animation: apparition 0.6s 0.6s ease-out forwards;
+
+}
+.container-form img {
+    position: absolute;
+    height: 125px;
+    width: 125px;
+    right: 32%;
+    bottom: 78%;
+}
+
+.register-form {
+    padding: 3%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    background-color: rgba(167, 167, 167, 0.6);
+    border: 2px solid #5c5d5c;
+    border-radius: 45px;
+    box-shadow: 3px 3px #7d827d;
+    display: inline-block;
+}
+
+/* FORM DESIGN */
+.header-form {
+    display: inline-flex;
+    padding: 5%;
+}
+.register-title {
+    text-align: center;
+    padding: 5%;
+    opacity: 0;
+    animation: apparition 0.6s 0.6s ease-out forwards;
+}
+
+form  {
+    opacity: 0;
+    text-align: center;
+    animation: apparition 0.6s 0.6s ease-out forwards;
+}
+label {
+    color: #fff;
+}
+input {
+    background-color: #fff;
+    padding: 1.5%;
+    border-bottom-color: #fff;
+    color: #000;
+    border-radius: 15px;
+}
+.register-list {
+    background-color: #fff;
+    padding: 1%;
+    color:  #000;
+    border-radius: 25px;
+}
+
+a {
+    margin-top: 15%;
+    background-color: #fff;
+    color: rgb(56, 208, 45);
+    border: 2px solid rgb(56, 208, 45);
+    border-radius: 15px;
+    padding: 2%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+
+}
+
+
+a:hover {
+    background-color: rgb(56, 208, 45);
+    color: #fff;
+}
+
+i {
+    transition: 0.8s ease-in-out;
+}
+a:hover i {
+    transform: rotate(360deg);
+}
+
+/* MOBILE CSS */
+@media screen and (max-width: 1260px){
+    .container-form {
+        margin: auto;
+        padding: 2%;
+        text-align: center;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    label {
+        font-size: 15px;
+    }
+    .register-form {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+    .header-form {
+        font-size: 15px;
+    }
+    .container-form img {
+       opacity: 0;
+    }
+}
+/* ANIMATION */
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
