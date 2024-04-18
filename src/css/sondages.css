@@ -1,0 +1,109 @@
+.sondage{
+    background-image: url("../images/cool-background.png");
+    border-color : rgb(0, 0, 0)!important;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    border: solid 1px black;
+}
+
+.sondage:hover {
+    opacity:0.9;
+}
+
+.titre-sondage {
+    color: black!important;
+    font-size: 2.2rem!important;
+}
+
+.texte-liste{
+    font-size: 3rem!important;
+    display: inline-block;
+    text-justify: auto;
+}
+
+.description-sondage {
+    text-align: left;
+    color: black !important;
+}
+
+.dates {
+    float: left;
+    margin-left:17px;
+}
+
+.dates p {
+    display: inline-block;
+    margin: 0;
+    color: black !important;
+    font-size: 1.2rem!important;
+
+}
+
+.date-creation::after {
+    content: " - ";
+    margin-right:5.5px; /* Pour ajouter un espace entre les deux dates */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.bi {
+    background-color: greenyellow;
+}
+
+.filtres {
+    background-image: url("../images/cool-background.png");
+    border-radius:15px;
+    padding:5px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.apply_param {
+    transition-duration: 0.4s;
+    padding:10px;
+    border-radius:10px;
+    background-color: rgb(226, 191, 191);;
+}
+
+.apply_param:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.hide {
+    display:none;
+}
+
+.filtre-title {
+    font-size:2rem!important;
+    color:black!important;
+}
+
+.creaSondage {
+    text-align: right;
+}
+
+.crea {
+    border: 2px solid rgb(0, 0, 0);
+    background: linear-gradient(to right, #5baa5f 50%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: bottom right;
+    transition: all 0.4s ease-out;
+    padding-right:8px;
+    border-radius:10px;
+}
+
+.crea:hover {
+    border: 2px solid rgb(0, 0, 0);
+    background-position: bottom left;
+    color: #000000;
+}
+.sondages {
+    border: 2px solid #000;
+    margin-bottom: 3%;
+    border-radius: 25px;
+}

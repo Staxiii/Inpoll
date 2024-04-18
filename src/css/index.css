@@ -1,5 +1,4 @@
 
-
 * {
     padding: 0;
     margin: 0;
@@ -71,7 +70,7 @@ input {
     border-radius: 25px;
 }
 
-a {
+.verify {
     margin-top: 15%;
     background-color: #fff;
     color: rgb(56, 208, 45);
@@ -86,7 +85,7 @@ a {
 }
 
 
-a:hover {
+.verify:hover {
     background-color: rgb(56, 208, 45);
     color: #fff;
 }
@@ -97,6 +96,14 @@ i {
 a:hover i {
     transform: rotate(360deg);
 }
+
+p {
+    margin-top: 3%;
+}
+.offer {
+    color: blue;
+}
+
 
 /* MOBILE CSS */
 @media screen and (max-width: 1260px){

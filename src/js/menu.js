@@ -6,6 +6,7 @@ hamburgerMenu.addEventListener('click', () => {
 
     const h1 = document.querySelector('.container-accueil h1');
     const p = document.querySelector('.container-accueil p');
+    const button = document.querySelector('')
 
     if(navContent.classList.contains('mobile-menu')) {
         h1.style.opacity = '0';

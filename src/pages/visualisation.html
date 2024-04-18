@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GreenPoll - Accueil</title>
+    <title>GreenPoll - Visualisations </title>
+
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Signika" />
 
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="../css/accueil.css">
 
     <script defer src="../js/users/data.js"></script>
-    <script defer src="../js/users/profile.js"></script>
+    <script defer src="../js/sondages/api.js"></script>
     <script src="../js/users/logout.js"></script>
     <script src="https://kit.fontawesome.com/e35fdab893.js" crossorigin="anonymous"></script>
 </head>
@@ -26,10 +27,10 @@
         <a href="#" class="nav-title"><img src="../../src/images/poll.png" alt=""><span>Green's</span> Poll</a>
         <div class="nav-content">
             <ul>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/accueil.html" class="index-color"><i class="fa-solid fa-door-open"></i> | Accueil</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/sondages.html"><i class="fa-solid fa-trophy"></i> | Sondages</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/visualisation.html"><i class="fa-solid fa-microchip"></i> | Visualisations</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/profile.html" id="showUser"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="accueil.html"><i class="fa-solid fa-door-open"></i> | Accueil</a></li>
+                <li><a href="sondages.html"><i class="fa-solid fa-trophy"></i> | Sondages</a></li>
+                <li><a href="visualisation.html" class="index-color"><i class="fa-solid fa-microchip"></i> | Visualisations</a></li>
+                <li><a href="profile.html" id="showUser"><i class="fa-solid fa-user"></i> | </a></li>
                 <li><a id="logout"><i class="fa-solid fa-lock"></i> | </a></li>
             </ul>
         </div>
@@ -37,12 +38,14 @@
         <script src="../../src/js/menu.js"></script>
     </nav>
 
-    <div class="container-accueil">
-        <h1>Création de <span class="sondage">sondages</span> personnalisés</h1>
-        <p>Actuellement <span class="number">+100</span> sondages disponibles !</p>
-
-        <a class="discover-btn" href="#" target="_blank"><i class="fa-solid fa-paperclip"></i>Découvrir</a>
+    <div class="container-sondage">
+        <div class="sondages">
+            <h1 id="sondage-title"></h1>
+            <p id="sondage-description"></p>
+            <h3 id="sondage-level"></h3>
+        </div>
     </div>
+
 
     <footer class="footer">
         <div class="container-footer">
@@ -85,6 +88,7 @@
 <div class="up-btn">
     <img src="../../src/images/arrow-up.png" alt="" class="icon">
     <script src="../../src/js/scroll.js"></script>
+</div>
 </div>
 </body>
 </html>

@@ -13,22 +13,21 @@
     margin: 10px;
     font-family: 'Signika', sans-serif;
 }
-.body {
+body {
     background-color: var(--bg-color);
 }
 
 /* REPRISE NAV */
-.navbar .nav-content ul li .index-color {
+.navbar .nav-content ul li .profile-color {
     color: #2f5bdd;
 }
 a {
     text-decoration: none;
 }
 
-.container-accueil {
+.container-profile {
     align-items: center;
     justify-content: space-between;
-    text-align: center;
     width: 100%;
     box-sizing: border-box;
     position: sticky;
@@ -37,7 +36,7 @@ a {
     animation: apparition 1s ease-in-out 0.7s forwards;
     --border-header: var(--border);
 }
-.container-accueil::after {
+.container-profile::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -50,51 +49,36 @@ a {
     margin-right: auto;
     height: 1px;
 }
+.container-profile h1 {
+    font-size: 3rem;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #000;
+    width: 75%;
+}
 
-.container-accueil h1 {
-    font-size: 2.5rem;
+.container-profile h3 {
+    font-size: 2rem;
     color: #5c5d5c;
 }
-.container-accueil h1 .sondage {
-    text-transform: uppercase;
-    color: #0733ef;
+.container-profile h3 span {
+    color: black;
+    font-size: 1rem;
 }
-.container-accueil p {
-    font-size: 1.5rem;
-    color: rgba(128, 128, 128, 0.87);
-    margin-bottom: 5%;
+.container-profile h3 .admin {
+    color: #ed0606;
+    border: 1px solid rgba(237, 6, 6, 0.2);
+    border-radius: 25px;
+    padding: 0.5%;
+    background-color: rgba(237, 6, 6, 0.2);
 }
-.container-accueil p .number {
-    color: #067b06;
-    font-style: normal;
-    animation-duration: 2s;
-    animation-name: multicolor;
-    animation-iteration-count: infinite;
-    transition: none;
-}
-a.discover-btn {
-    background-color: #fff;
-    color: red;
-    border: 2px solid red;
-    border-radius: 45px;
-    padding: 1%;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.9s ease;
-    text-decoration: none;
-}
-i {
-    transition: all 0.9s ease;
+.container-profile h3 .user {
+    color: #23e421;
+    border: 1px solid rgba(35, 228, 33, 0.2);
+    border-radius: 25px;
+    padding: 0.5%;
+    background-color: rgba(35, 228, 33, 0.2);
 }
 
-a.discover-btn:hover {
-    color: #fff;
-    background-color: red;
-}
-
-a.discover-btn:hover i {
-    transform: rotate(360deg);
-}
 @media screen and (max-width: 1260px){
 
     .container {
