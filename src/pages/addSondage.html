@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sondage - Ajout</title>
+
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div class="container">
+    <div class="container-form">
+        <div class="register-form">
+            <div class="header-form">
+                <h1 class="register-title"> Ajouter un sondage</h1>
+            </div>
+            <form>
+                <label>| Titre du sondage</label><br>
+                <input name="title" placeholder="Titre" value="">
+
+                <br><br>
+
+                <label>| Description</label><br>
+                <input name="description" placeholder="Description" value="">
+
+                <br><br>
+
+                <label>| Date de début</label><br>
+                <input type="date" name="time-start" placeholder="Date du début" value="">
+
+                <br><br>
+                <label>| Date de fin</label><br>
+                <input type="date" name="time-end" placeholder="Date de fin" value="">
+
+
+                <br><br>
+                <a id="button"><i class="fas fa-user"></i> Valider la création</a>
+                <br><br>
+                <h5 id="message"></h5>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import "animations/apparition.css";
+@import "animations/multicolor.css";
+
+:root {
+    --bg-color: rgba(138, 136, 134, 0.05);
+    --border: #cccfd3;
+    --container-padding:20px;
+    --container-width: calc(90vw - var(--container-padding) * 2)
+}
+
+* {
+    padding: 0;
+    margin: 10px;
+    font-family: 'Signika', sans-serif;
+}
+body {
+    background-color: var(--bg-color);
+}
+
+/* REPRISE NAV */
+.navbar .nav-content ul li .profile-color {
+    color: #2f5bdd;
+}
+a {
+    text-decoration: none;
+}
+
+.container-profile {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    padding: 10%;
+    opacity: 0;
+    animation: apparition 1s ease-in-out 0.7s forwards;
+    --border-header: var(--border);
+}
+.container-profile::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    background-color: var(--border-header);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    height: 1px;
+}
+.container-profile h1 {
+    font-size: 3rem;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #000;
+    width: 75%;
+}
+
+.container-profile h3 {
+    font-size: 2rem;
+    color: #5c5d5c;
+}
+.container-profile h3 span {
+    color: black;
+    font-size: 1rem;
+}
+.container-profile h3 .admin {
+    color: #ed0606;
+    border: 1px solid rgba(237, 6, 6, 0.2);
+    border-radius: 25px;
+    padding: 0.5%;
+    background-color: rgba(237, 6, 6, 0.2);
+}
+.container-profile h3 .user {
+    color: #23e421;
+    border: 1px solid rgba(35, 228, 33, 0.2);
+    border-radius: 25px;
+    padding: 0.5%;
+    background-color: rgba(35, 228, 33, 0.2);
+}
+
+@media screen and (max-width: 1260px){
+
+    .container {
+        border: none;
+        box-shadow: none;
+    }
+    .container-accueil {
+        margin-top: 10%;
+    }
+    .container-accueil h1 {
+        font-size: 1.75rem;
+    }
+
+    .container-accueil p {
+        font-size: 1rem;
+    }
+    .container-accueil::after {
+
+    }
+}
+

@@ -1,0 +1,25 @@
+@import "../animations/apparition.css";
+
+/*UP CSS */
+.up-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 25px;
+    bottom: 10px;
+    cursor: pointer;
+    opacity: 0;
+    animation: apparition 1.2s  ease-in-out 0.8s forwards;
+}
+.icon {
+    height: 20px;
+    width: 20px;
+}
+.up-btn:hover {
+    background-color: rgba(47, 91, 221, 0.5);
+}
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a694540-0589-4f02-8031-a239043d9d16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/js/api/forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/partials/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/partials/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/partials/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/partials/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/accueil.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/greenspoll" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1695279142" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1695279112" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2V4DXvKxepaxbuZUrM5dpMeMdB5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop",
+    "last_opened_file_path": "P:/JS/TP3/tp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\Sondage\greenspoll\src\js" />
+      <recent name="P:\Sondage\images\socials" />
+      <recent name="P:\Sondage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\Sondage\css\partials" />
+      <recent name="P:\Sondage\css" />
+      <recent name="P:\Sondage" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a694540-0589-4f02-8031-a239043d9d16" name="Changes" comment="" />
+      <created>1694086502357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694086502357</updated>
+      <workItem from="1694086503401" duration="1009000" />
+      <workItem from="1694087548939" duration="3226000" />
+      <workItem from="1694090837091" duration="3074000" />
+      <workItem from="1694094718694" duration="79000" />
+      <workItem from="1694094819979" duration="357000" />
+      <workItem from="1694095203916" duration="2108000" />
+      <workItem from="1694510742357" duration="1217000" />
+      <workItem from="1694511993173" duration="1020000" />
+      <workItem from="1694608909062" duration="961000" />
+      <workItem from="1694671878961" duration="2622000" />
+      <workItem from="1694674614733" duration="861000" />
+      <workItem from="1694675504524" duration="7322000" />
+      <workItem from="1694682974101" duration="2780000" />
+      <workItem from="1694691961627" duration="22000" />
+      <workItem from="1694692000465" duration="599000" />
+      <workItem from="1695107688599" duration="1526000" />
+      <workItem from="1695276867837" duration="2254000" />
+      <workItem from="1695279172645" duration="11133000" />
+      <workItem from="1695290618460" duration="789000" />
+      <workItem from="1695295873365" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+  </component>
+</project>
