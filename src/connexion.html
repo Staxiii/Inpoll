@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inpoll - Authentification</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://kit.fontawesome.com/e35fdab893.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="container-form">
+        <div class="container-image">
+            <img src="images/logo.png">
+        </div>
+        <div class="register-form">
+            <div class="header-form">
+                <h1 class="register-title"> Authentification Inpoll</h1>
+            </div>
+            <form>
+                <label>| Votre adresse email</label><br>
+                <input name="email" placeholder="Adresse Email" value=""><br><br>
+                <p>Pas de compte ? <a class="offer" href="inscription.html">S'inscrire</a></p><br><br>
+                <a id="button" class="verify"><i class="fas fa-user"></i> Vérifier</a><br><br>
+                <h5 id="message"></h5>
+            </form>
+            <script src="js/users/connexion.js"></script>
+            <script src="js/users/global.js" defer></script>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

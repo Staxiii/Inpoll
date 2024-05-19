@@ -8,7 +8,8 @@
     <title>Sondage - Inscription</title>
 
     <link rel="stylesheet" href="css/index.css">
-    <script defer src="js/users/register.js"></script>
+    <script defer src="js/users/inscription.js"></script>
+    <script defer src="js/users/global.js"></script>
 </head>
 <body>
 <div class="container">
@@ -18,34 +19,25 @@
         </div>
         <div class="register-form">
             <div class="header-form">
-                <h1 class="register-title"> Sondage Inscription</h1>
+                <h1 class="register-title"> Inscription</h1>
             </div>
             <form>
                 <label>| Votre prénom</label><br>
-                <input id="firstname" name="firstname" placeholder="Prénom" value="">
+                <input id="prenom" name="firstname" placeholder="Prénom" value="">
 
                 <br><br>
                 <label>| Votre nom de famille</label><br>
-                <input  id="lastname" name="lastname" placeholder="Nom de famille" value="">
+                <input  id="nom" name="lastname" placeholder="Nom de famille" value="">
 
                 <br><br>
                 <label>| Votre adresse email</label><br>
-                <input id="email" name="email" placeholder="Adresse Email" value="">
+                <input id="email" type="" name="email" placeholder="Adresse Email" value="">
 
                 <br><br>
 
-                <label>| Faites votre choix</label><br>
-                <select name="list" class="register-list">
-                    <option value=""> Choisir une option <i class="fa-solid fa-arrow-down"></i></option>
-                    <option value="">bts-sio1-sisr</option>
-                    <option value="">brs-sio1-slam</option>
-                    <option value="">brs-sio2-sisr</option>
-                    <option value="">brs-sio2-slam</option>
-                </select>
-
-                <p>Déjà un compte ? <a class="offer" href="index.html">Se connecter</a></p>
+                <p>Déjà un compte ? <a  href="connexion.html">Se connecter</a></p>
                 <br><br>
-                <a class="verify" id="register"><i class="fas fa-user"></i> Vérifier</a>
+                <a class="verify offer" id="inscription"><i class="fas fa-user"></i> Vérifier</a>
                 <br><br>
                 <h5 id="message"></h5>
             </form>

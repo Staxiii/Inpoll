@@ -15,9 +15,9 @@
 
     <link rel="stylesheet" href="../css/accueil.css">
 
-    <script defer src="../js/users/data.js"></script>
-    <script defer src="../js/users/profile.js"></script>
-    <script src="../js/users/logout.js"></script>
+   <!-- <script defer src="../js/users/data.js"></script> -->
+   <script defer src="../js/users/global.js"></script>
+   <script src="../js/users/logout.js"></script>
     <script src="https://kit.fontawesome.com/e35fdab893.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,16 +26,17 @@
         <a href="#" class="nav-title"><img src="../../src/images/poll.png" alt=""><span>Green's</span> Poll</a>
         <div class="nav-content">
             <ul>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/accueil.html" class="index-color"><i class="fa-solid fa-door-open"></i> | Accueil</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/sondages.html"><i class="fa-solid fa-trophy"></i> | Sondages</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/visualisation.html"><i class="fa-solid fa-microchip"></i> | Visualisations</a></li>
-                <li><a href="http://192.168.3.220/~alexis.fouquet/Projet%20AP%201er%20semestre/inpoll/app-web/sondage/src/pages/profile.html" id="showUser"><i class="fa-solid fa-user"></i></a></li>
+                <li><a href="accueil.html" class="index-color"><i class="fa-solid fa-door-open"></i> | Accueil</a></li>
+                <li><a href="sondages.html"><i class="fa-solid fa-trophy"></i> | Sondages</a></li>
+                <li><a href="visualisation.html"><i class="fa-solid fa-microchip"></i> | Visualisations</a></li>
+                <li><a href="profile.html" id="showUser"><i class="fa-solid fa-user"></i> </a></li>
                 <li><a id="logout"><i class="fa-solid fa-lock"></i> | </a></li>
             </ul>
         </div>
         <img src="../images/burger-nav.png" alt="" class="hamburger-menu">
         <script src="../../src/js/menu.js"></script>
     </nav>
+    <div id="sondagesContainer" class="bandeau-notif"></div>
 
     <div class="container-accueil">
         <h1>Création de <span class="sondage">sondages</span> personnalisés</h1>
