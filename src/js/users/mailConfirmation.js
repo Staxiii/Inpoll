@@ -1,6 +1,5 @@
 // Fonction pour mettre à jour la propriété connected dans le backend
 async function updateConnected(userId) {
-
     if (!userId) {
         console.error('User ID is null or undefined');
         return;
@@ -26,6 +25,7 @@ async function updateConnected(userId) {
     }
 }
 
+
 // Récupération des informations de l'utilisateur au chargement de la page
 if (window.location.pathname.endsWith('/mailConfirmation.html')) {
     const idUtilisateur = localStorage.getItem('userId');
@@ -47,6 +47,7 @@ if (window.location.pathname.endsWith('/mailConfirmation.html')) {
                     const user = await getUserByEmail(email);
                     if (user) {
                         storeUserInLocalStorage(user); // Stocker toutes les informations de l'utilisateur dans le local storage
+                        storeUserIdInLocalStorage(user._id); // Stocker l'ID de l'utilisateur dans le local storage
                         updateConnected(user._id); // Mettre à jour l'état de connexion
                         setTimeout(() => {
                             window.location = 'accueil.html';

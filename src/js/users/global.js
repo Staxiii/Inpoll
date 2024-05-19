@@ -7,8 +7,10 @@ function storeUserIdInLocalStorage(userId) {
 
 // Fonction pour récupérer l'ID de l'utilisateur depuis le localStorage
 function getUserIdFromLocalStorage() {
-    return localStorage.getItem('userId');
+    const userId = localStorage.getItem('userId');
+    return userId;
 }
+
 
 // Fonction pour stocker l'utilisateur dans le localStorage
 function storeUserInLocalStorage(user) {
@@ -25,11 +27,8 @@ function getUserFromLocalStorage() {
     return userJSON ? JSON.parse(userJSON) : null;
 }
 
-const user = getUserFromLocalStorage();
-
-
 // Affichage des informations de l'utilisateur
-if(user){
+function displayUserInfo() {
     document.addEventListener('DOMContentLoaded', function () {
         const user = getUserFromLocalStorage();
         const showUserElement = document.getElementById('showUser');
@@ -43,21 +42,36 @@ if(user){
     });
 }
 
-document.querySelectorAll('input').forEach((element) => element.addEventListener('input', () => {
-    document.getElementById("message").innerHTML = "";
-}));
+// Gestion des événements de saisie sur les champs de formulaire
+function handleInputEvents() {
+    document.querySelectorAll('input').forEach((element) => element.addEventListener('input', () => {
+        document.getElementById("message").innerHTML = "";
+    }));
+}
 
-if (window.location.pathname.endsWith('/accueil.html')) {
-    if (userId) {
-        fetchAndDisplaySondages(userId);
-        setInterval(() => {
-            fetchAndDisplaySondages(userId);
-        }, 3000);
+// Affichage des sondages
+function displaySondages(sondages) {
+    const container = document.getElementById('sondagesContainer');
+    if (!container) {
+        console.error('Element with ID "sondagesContainer" not found');
+        return;
+    }
+    container.innerHTML = '';
+    if (sondages && sondages.length > 0) {
+        container.classList.add('bandeau-notif');
+        const messageElement = document.createElement('div');
+        messageElement.textContent = 'Vous avez des sondages express disponibles:';
+        container.appendChild(messageElement);
+        const titres = sondages.map(sondage => sondage.titre);
+        const titresElement = document.createElement('div');
+        titresElement.textContent = titres.join(', ');
+        container.appendChild(titresElement);
     } else {
-        console.error('User ID not found in localStorage');
+        container.classList.remove('bandeau-notif');
     }
 }
 
+// Récupération des sondages et affichage sur la page d'accueil
 async function fetchAndDisplaySondages(userId) {
     try {
         const sondages = await fetchSondages(userId);
@@ -67,10 +81,7 @@ async function fetchAndDisplaySondages(userId) {
     }
 }
 
-function getUserIdFromLocalStorage() {
-    return localStorage.getItem('userId');
-}
-
+// Fonction pour effectuer une requête HTTP pour récupérer les sondages pour un utilisateur donné
 async function fetchSondages(userId) {
     try {
         const response = await fetch(`https://inpoll-alexisfouquet.azurewebsites.net/sondages/express/${userId}`);
@@ -89,25 +100,22 @@ async function fetchSondages(userId) {
     }
 }
 
-function displaySondages(sondages) {
-    const container = document.getElementById('sondagesContainer');
-    if (!container) {
-        console.error('Element with ID "sondagesContainer" not found');
-        return;
-    }
-    container.innerHTML = '';
-    if (sondages && sondages.length > 0) {
-        container.classList.add('bandeau-notif');
-        const messageElement = document.createElement('div');
-        messageElement.textContent = 'Vous avez des sondages express disponibles:';
-        container.appendChild(messageElement);
-        const titres = sondages.map(sondage => sondage.titre); 
-        const titresElement = document.createElement('div');
-        titresElement.textContent = titres.join(', ');
-
-        container.appendChild(titresElement);
-    } else {
-        container.classList.remove('bandeau-notif');
+// Fonction pour récupérer et afficher les informations de l'utilisateur sur la page d'accueil
+function displayUserInfoOnHomePage() {
+    if (window.location.pathname.endsWith('/accueil.html')) {
+        displayUserInfo();
+        const userId = getUserIdFromLocalStorage();
+        if (userId) {
+            fetchAndDisplaySondages(userId);
+            setInterval(() => {
+                fetchAndDisplaySondages(userId);
+            }, 3000);
+        } else {
+            console.error('User ID not found in localStorage');
+        }
     }
 }
 
+// Appel des fonctions appropriées au chargement de la page d'accueil
+displayUserInfoOnHomePage();
+handleInputEvents();
