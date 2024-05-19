@@ -1,7 +1,7 @@
 // Fonction pour envoyer l'email de vérification
 function sendEmail(email, randomCode) {
     localStorage.setItem('randomCode', randomCode);
-    localStorage.setItem('email', email); 
+    localStorage.setItem('email', email);
     Email.send({
         Host: "smtp.elasticemail.com",
         Port: 2525,
@@ -28,7 +28,7 @@ if (window.location.pathname.endsWith('/connexion.html')) {
                     document.getElementById("message").innerHTML = "Recherche de l'email en cours...";
                     const user = await getUserByEmail(email);
                     if (user) {
-                        if (user.connected !== true) { 
+                        if (user.connected !== true) {
                             const randomCode = generateRandomCode();
                             sendEmail(email, randomCode);
                             document.getElementById("message").innerHTML = "Code envoyé par email, suivez les instructions...";
@@ -36,6 +36,12 @@ if (window.location.pathname.endsWith('/connexion.html')) {
                             localStorage.setItem('randomCode', randomCode);
                             setTimeout(() => { window.location = 'pages/mailConfirmation.html'; }, 2000);
                         } else { // Redirection vers accueil si connected = true
+                            const user = await getUserByEmail(email);
+                            storeUserInLocalStorage(user);
+                            storeUserIdInLocalStorage(user._id);
+                            setTimeout(() => {
+                                window.location = 'accueil.html';
+                            }, 3000);
                             document.getElementById("message").innerHTML = "Utilisateur reconnu, redirection vers accueil !";
                             setTimeout(() => { window.location = 'pages/accueil.html'; }, 2000);
                         }
@@ -50,7 +56,7 @@ if (window.location.pathname.endsWith('/connexion.html')) {
             }
         });
     }
-    
+
     verifyProfile();
 }
 
